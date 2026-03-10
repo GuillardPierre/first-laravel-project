@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 class article extends Component
 {
     public $title;
-    public $content; 
+    public $content;
     public function __construct($title, $content)
     {
         $this->title = $title;
@@ -17,6 +17,6 @@ class article extends Component
     }
     public function render(): View|Closure|string
     {
-        return view('components.article');
+        return view("components.article");
     }
 }
