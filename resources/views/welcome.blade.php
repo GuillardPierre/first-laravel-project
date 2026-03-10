@@ -7,7 +7,7 @@
     @if ($loop->last)
     @break
     @endif
-    <x-article :title="$article['title']" :content="$article['content']" />
+    <x-article :title="$article['title']" :content="Str::limit($article['content'], 30)" />
     @empty
         <p>Aucun article pour le moment.</p>
     @endforelse
