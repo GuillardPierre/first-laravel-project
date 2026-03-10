@@ -2,7 +2,7 @@
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
         <head>
             <meta charset="UTF-8">
-            <link rel="icon" type="image/x=con" href="{{ asset("favicon.png") }}"/>
+            <link rel="icon" type="image/x-icon" href="{{ asset("favicon.png") }}"/>
             <title>@yield('title')</title>
         </head>
     <body>
