@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('title')
-    Article {{ $id }}
+    Article {{ $title }}
 @endsection
 @section('content')
-    <h2>Article portant l'id {{ $id }}</h2>
+    <h2>{{ $title }}</h2>
+    <p>{{ $content }}</p>
 @endsection
 
