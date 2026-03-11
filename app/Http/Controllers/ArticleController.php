@@ -13,7 +13,7 @@ class ArticleController extends Controller
         if (!$article) {
             return view("errors.not-found");
         }
-        return view("pages.article-details", $article);
+        return view("pages.article-details", compact("article"));
     }
 
     public function create()

@@ -8,8 +8,8 @@
             @if ($loop->last)
                 @break
             @endif
-            <a href="articles/{{$article['id']}}">
-                <x-article :title="$article['title']" :content="Str::limit($article['content'], 30)" :id="$article['id']" />
+            <a href="{{ route('article.details', ['id' => $article->id]) }}">
+                <x-article :title="$article->title" :content="Str::limit($article->content, 30)" />
             </a>
         @empty
             <p>Aucun article pour le moment.</p>

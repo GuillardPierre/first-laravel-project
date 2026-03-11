@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title')
-    Article {{ $title }}
+    Article {{ $article->title }}
 @endsection
 @section('content')
-    <x-article :title="$title" :content="$content" />
+    <x-article :title="$article->title" :content="$article->content" />
 @endsection
