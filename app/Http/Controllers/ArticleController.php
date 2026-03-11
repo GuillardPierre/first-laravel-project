@@ -13,10 +13,7 @@ class ArticleController extends Controller
         if (!$article) {
             return view("errors.not-found");
         }
-        return view("pages.article-details", [
-            "title" => $article["title"],
-            "content" => $article["content"],
-        ]);
+        return view("pages.article-details", $article);
     }
 
     public function create()
@@ -49,6 +46,9 @@ class ArticleController extends Controller
     public function update($id)
     {
         $article = Article::find($id);
+        if (!$article) {
+            return view("errors.not-found");
+        }
         $article->title = "Titre modifié";
         $article->content = "Contenu modifié";
         $article->save();
@@ -57,6 +57,9 @@ class ArticleController extends Controller
     public function delete($id)
     {
         $article = Article::find($id);
+        if (!$article) {
+            return view("errors.not-found");
+        }
         $article->delete();
     }
 }

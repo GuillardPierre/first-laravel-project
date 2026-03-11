@@ -3,7 +3,5 @@
     Article {{ $title }}
 @endsection
 @section('content')
-    <h2>{{ $title }}</h2>
-    <p>{{ $content }}</p>
+    <x-article :title="$title" :content="$content" />
 @endsection
-
